@@ -95,9 +95,10 @@ class ZKLib:
         command = unpack('HHHH', reply[:8])[0]
 	
         if command == CMD_ACK_OK:
-            print "CMD_ACK_OK"
+            print "~CMD_ACK_OK=1"
             return True
         else:
+            print "~CMD_ACK_OK=0"
             return False
             
     def connect(self):
